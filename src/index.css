@@ -1,6 +1,189 @@
-.note
-{
-    width: 120px;
-    height: 170px;
-    background-color: yellow;
+
+
+body {
+  
+      background-image: url(https://templates-station.com/wp-content/uploads/2018/06/black-template-black-and-white-stage-lights-background-141278.jpg);
+
+      background-size: cover;
+      height: max-content;
+
+  }
+
+  html{
+    height: -webkit-fill-available;
+  }
+
+  @keyframes example {
+    from {color: white;}
+    to {color: red;}
+    
+  }
+
+  .Error{
+    color: red;
+    font-size: 20px;
+    animation: example 0.25s ;
+    animation-iteration-count: 7;
+    text-shadow: 0 0 20px red;
+    
+    
+  }
+
+.Wrapper{
+  overflow-x: hidden;
 }
+
+.Center{
+    text-align: center;
+}
+
+.Icon{
+    text-align: center;
+    cursor: pointer;
+}
+
+.card__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .card{
+    width: 230px;
+    height: 350px;
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0 5px 20px -5px black;
+    margin: 15px;
+    animation: fadeIn 1s;
+    transition: all 0.2s ease;
+    cursor: default !important;
+    z-index: 2;
+  }
+  
+  .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 60px -10px black;
+  }
+  
+  .card--blue{
+    background-color: black !important;
+    /* background-image: linear-gradient(to right bottom, #2e4a72, #4f6a93, #708cb6, #93afda, #b6d4ff); */
+  }
+  
+  
+  .card__title{
+    /* height: 20px;
+    width: 0px;
+    color: white;
+    transform: rotate(-90deg);
+    margin: 3px 26px 25px 43px;
+    font-size: 30px; */
+    opacity: 1;
+    transition: all 0.1s ease;
+  }
+  
+  .card__photo{
+    width: 190px;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: all 0.8s ease;
+  }
+  
+  .card__description{
+    padding: 10px;
+    color: white !important;
+    margin: 5px;
+    background-color: #0000003b;
+    border-radius: 5px;
+    opacity: 0.3;
+    transition: all 0.5s ease;
+    
+  }
+
+  
+  .card__description:hover{
+   
+    opacity: 1;
+   
+    
+  }
+  
+  .card__photo--mountain{
+    background-image: url();
+  }
+  
+  .card__polygon{
+    width: 230px;
+    height: 300px;
+    position: absolute;
+    border-radius: 5px;
+  }
+  
+  .card__polygon--blue{
+    background-color: rgb(105,105,105);
+  }
+  
+  .card__polygon--green{
+    background-color: #42462b;
+  }
+  
+  .card__polygon--red{
+    background-color: #760104;
+  }
+  
+  .card__polygon--first{
+    opacity: 0.7;
+    clip-path: polygon(0 75%, 0% 99%, 21% 83%);
+  }
+  
+  .card__polygon--second{
+    opacity: 1;
+    clip-path: polygon(21% 83%, -4% 102%, 48% 111%);
+  }
+  
+  .card__polygon--third{
+    opacity: 0.5;
+    clip-path: polygon(21% 83%, -1% 47%, -1% 100%);
+  }
+  
+  .title{
+    width: 125px;
+    padding: 5px;
+  }
+  
+  .center{
+    margin: auto;
+  }
+  
+  .btn-block {
+    display: block;
+    width: 65% !important;
+  }
+  .btn-info {
+    color: black;
+    background-color: #17a2b8;
+    border-color: black !important;
+  }
+  
+  
+  
+  @keyframes fadeIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0; 
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
