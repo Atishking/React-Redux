@@ -108,7 +108,9 @@ debugger
     {
       debugger;
     this.props.editMovie(Editedmovie)
+    // .replace(/\b\w/g, l => l.toUpperCase())
     this.setState({ modal: !this.state.modal });
+    this.setState({Title:undefined})
     }
     else{
       let InputError = document.getElementById("Error")

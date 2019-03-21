@@ -18,6 +18,7 @@
     const notesReducer = (state = initialState, action) => {
      
         let newState = {};
+        let UpperWord;
         switch (action.type) {
             case 'EDIT_MOVIE_DETAILS':
                 newState = Object.assign({}, state);
@@ -34,26 +35,31 @@
                newState.MoviesArray = action.data;
                return newState
             case 'ADD_MOVIE':            
+            debugger;
                  newState = Object.assign({}, state);
-                let UpperWord = action.data.Title.replace(/\b\w/g, l => l.toUpperCase())
-                var index = newState.MoviesArray.findIndex(x => x.Title == UpperWord)
+                var index = newState.MoviesArray.findIndex(x => x.Title == action.data.Title)
                 // here you can check specific property for an object whether it exist in your array or not
                 if (index === -1) {
                     newState.MoviesArray.push(action.data);
                     newState.Titlemsg=""
                 }
                 // else alert("This movie already exists")
-                else newState.Titlemsg="This movie already exists. Please add movie with a different title."
+                else newState.Titlemsg="This Movie already excists. Please try a different title."
                 return newState;
             case 'EDIT_MOVIE':              
-                 newState = Object.assign({}, state);           
+                 newState = Object.assign({}, state);      
+                 var index2 = newState.MoviesArray.findIndex(x => x.Title == action.data.Title)    
+                 if (index2 === -1) { 
                 for (let i = 0; i < newState.MoviesArray.length; i++) {
                     if (action.data.imdbID == newState.MoviesArray[i].imdbID) {
                         var editedMovie = action.data
                         newState.MoviesArray[i] = editedMovie;
+                        newState.Titlemsg=""
                         return newState;
                     }
+                  }   
                 }
+                else newState.Titlemsg="This Movie already excists. Please try a different title."
                 return newState;
                 case 'DELETE_MOVIE':   
                  newState = Object.assign({}, state);

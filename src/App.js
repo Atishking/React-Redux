@@ -98,8 +98,8 @@ class App extends Component {
       let ObjToSend = {
         Director: movie.Director,
         Genre: movie.Genre,
-        Runtime: movie.Runtime +"min",
-        Title: movie.Title,
+        Runtime: movie.Runtime +" min",
+        Title: movie.Title.replace(/\b\w/g, l => l.toUpperCase()),
         Year: movie.Year
       }
       let Obj = Object.assign(ObjToSend, MovieID)
@@ -107,6 +107,7 @@ class App extends Component {
       this.props.addNewMovie(Obj)
       this.setState({ added: id })
       this.toggle();
+      this.setState({Title:undefined})
 
 
     }
